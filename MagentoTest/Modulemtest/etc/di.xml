@@ -1,0 +1,13 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="MagentoTest\Modulemtest\Api\Data\MainInterface"
+                type="MagentoTest\Modulemtest\Model\Main"/>
+
+    <preference for="MagentoTest\Modulemtest\Api\MainRepositoryInterface"
+                type="MagentoTest\Modulemtest\Model\MainRepository"/>
+
+    <preference for="MagentoTest\Modulemtest\Api\Data\MainSearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults" />
+
+</config>

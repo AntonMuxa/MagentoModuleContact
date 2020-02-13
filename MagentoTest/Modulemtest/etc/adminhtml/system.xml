@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="coupon" translate="label" sortOrder="200">
+            <label>Coupon</label>
+        </tab>
+        <section id="coupon" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Coupon</label>
+            <tab>coupon</tab>
+            <resource>MagentoTest_Modulemtest::config</resource>
+            <group id="fields_masks" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Coupon values</label>
+                <field id="coupon_default_val" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Default value</label>
+                    <comment>Some comment</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
