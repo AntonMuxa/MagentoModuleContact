@@ -16,7 +16,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
     public function upgrade(SchemaSetupInterface $setup, ModuleContextInterface $context)
     {
         $setup->startSetup();
-        if (version_compare($context->getVersion(), '0.0.2', '<')) {
+        if (version_compare($context->getVersion(), '0.0.3', '<')) {
             $setup->getConnection()->addColumn(
                 $setup->getTable('magentotest_modulemtest_model'),
                 'season',
@@ -26,6 +26,17 @@ class UpgradeSchema implements UpgradeSchemaInterface
                     'nullable' => false,
                     'default' => '',
                     'comment' => 'Season'
+                ]
+            );
+            $setup->getConnection()->addColumn(
+                $setup->getTable('magentotest_modulemtest_model'),
+                'enabled',
+                [
+                    'type' => \Magento\Framework\DB\Ddl\Table::TYPE_BOOLEAN,
+                    'length' => 1,
+                    'nullable' => false,
+                    'default' => 1,
+                    'comment' => 'Enabled'
                 ]
             );
         }
