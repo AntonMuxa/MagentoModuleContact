@@ -2,9 +2,9 @@
 /** @var MagentoTest\Modulemtest\Block\Main $block*/
 ?>
 <?php foreach ($block->getMain()->getItems() as $item): ?>
-    <span>Name: <?php $item->getName();?></span><br/>
-    <span>Email: <?php $item->getEmail();?></span><br/>
-    <span>Content: <?php $item->getContent();?></span>
-    <span>Season: <?php $item->getSeason();?></span>
+    <span>Name: <?php echo $item->getName();?></span><br/>
+    <span>Email: <?php echo $item->getEmail();?></span><br/>
+    <span>Content: <?php echo $item->getContent();?></span>
+    <span>Season: <?php echo $item->getSeason();?></span>
     ------------------------------------------------------
 <?php endforeach; ?>
