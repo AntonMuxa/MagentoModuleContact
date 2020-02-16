@@ -7,7 +7,17 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="MagentoTest_Modulemtest::coupon" title="Coupon" module="MagentoTest_Modulemtest" sortOrder="20" resource="MagentoTest_Modulemtest::coupon"/>
-        <add id="MagentoTest_Modulemtest::config" title="Show config" module="MagentoTest_Modulemtest" sortOrder="10" parent="MagentoTest_Modulemtest::coupon" action="magentotestadmin/index/index" resource="MagentoTest_Modulemtest::config"/>
+        <add id="MagentoTest_Modulemtest::coupon"
+             title="Coupon"
+             module="MagentoTest_Modulemtest"
+             sortOrder="20"
+             resource="Magento_Backend::content"/>
+        <add id="MagentoTest_Modulemtest::config"
+             title="Show config"
+             module="MagentoTest_Modulemtest"
+             sortOrder="10"
+             parent="MagentoTest_Modulemtest::coupon"
+             action="modulemtest/main/index"
+             resource="Magento_Backend::content"/>
     </menu>
 </config>
